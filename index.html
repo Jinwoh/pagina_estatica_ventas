@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fuzors Store</title>
+  <meta name="description" content="Venta de cámaras, lentes y accesorios. Página estática." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <span class="brand__logo"><img src="/img/logo/logo.png" alt="logo"></span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Navegación principal">
+        <a class="nav__link" href="#inicio">Inicio</a>
+
+        <div class="dropdown" data-dropdown>
+          <button class="nav__link dropdown__btn" type="button" aria-haspopup="true" aria-expanded="false">
+            Categorías
+            <span class="chev">▾</span>
+          </button>
+
+          <div class="dropdown__menu" role="menu">
+            <!-- Si preferís páginas separadas, reemplazá href="#..." por "camaras.html" etc -->
+            <a role="menuitem" href="#cat-camaras">Cámaras</a>
+            <a role="menuitem" href="#cat-lentes">Lentes</a>
+            <a role="menuitem" href="#cat-accesorios">Accesorios</a>
+            <a role="menuitem" href="#cat-iluminacion">Iluminación</a>
+          </div>
+        </div>
+
+        <a class="nav__link" href="#sobre">Sobre Nosotros</a>
+        <a class="nav__link nav__cta" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="tag">Tienda de fotografía</p>
+          <h1>Equipos de cámaras de seguridad.</h1>
+          <p class="lead">
+            Cámaras, video valun y accesorios listos para entregar.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#destacados">Ver destacados</a>
+            <a class="btn btn--ghost" href="#categorias">Explorar categorías</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <!-- Cambiá la imagen por la tuya -->
+          <img src="/img/assets/unnamed-1.jpg" alt="Cámara profesional sobre una mesa" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Destacados -->
+    <section class="section" id="destacados">
+      <div class="container">
+        <div class="section__head">
+          <h2>Destacados</h2>
+          <p class="muted">Editá estos cards y duplicalos. Las imágenes van directo en el HTML.</p>
+        </div>
+
+        <div class="grid cards">
+          <!-- Producto -->
+          <article class="card">
+            <div class="card__img">
+              <img src="assets/img/prod-canon-r6.jpg" alt="Cámara Canon R6" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Canon R6 (Body)</h3>
+              <p class="muted">Full-frame • 20MP • 4K</p>
+              <div class="card__meta">
+                <span class="price">Gs. 9.500.000</span>
+                <span class="stock in">En stock</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--small btn--primary" href="#contacto" data-prefill="Canon R6 (Body)">Consultar</a>
+                <button class="btn btn--small btn--ghost" type="button" data-modal="Canon R6 (Body)|Full-frame 20MP, 4K, estabilización.|assets/img/prod-canon-r6.jpg|Gs. 9.500.000|En stock">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img">
+              <img src="assets/img/prod-sony-a7iii.jpg" alt="Cámara Sony A7 III" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Sony A7 III</h3>
+              <p class="muted">Full-frame • 24MP • AF rápido</p>
+              <div class="card__meta">
+                <span class="price">Gs. 8.800.000</span>
+                <span class="stock low">Últimas unidades</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--small btn--primary" href="#contacto" data-prefill="Sony A7 III">Consultar</a>
+                <button class="btn btn--small btn--ghost" type="button" data-modal="Sony A7 III|24MP, excelente low-light, AF híbrido.|assets/img/prod-sony-a7iii.jpg|Gs. 8.800.000|Últimas unidades">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img">
+              <img src="assets/img/prod-lens-24-70.jpg" alt="Lente 24-70mm" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Lente 24-70mm f/2.8</h3>
+              <p class="muted">Versátil • Retrato • Eventos</p>
+              <div class="card__meta">
+                <span class="price">Gs. 4.200.000</span>
+                <span class="stock out">Sin stock</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--small btn--primary" href="#contacto" data-prefill="Lente 24-70mm f/2.8">Consultar</a>
+                <button class="btn btn--small btn--ghost" type="button" data-modal="Lente 24-70mm f/2.8|Ideal para bodas y eventos. Apertura constante.|assets/img/prod-lens-24-70.jpg|Gs. 4.200.000|Sin stock">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img">
+              <img src="assets/img/prod-tripod.jpg" alt="Trípode de cámara" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Trípode Aluminio Pro</h3>
+              <p class="muted">Hasta 1.70m • Cabezal fluido</p>
+              <div class="card__meta">
+                <span class="price">Gs. 450.000</span>
+                <span class="stock in">En stock</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--small btn--primary" href="#contacto" data-prefill="Trípode Aluminio Pro">Consultar</a>
+                <button class="btn btn--small btn--ghost" type="button" data-modal="Trípode Aluminio Pro|Ligero, estable y con cabezal fluido.|assets/img/prod-tripod.jpg|Gs. 450.000|En stock">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="section section--alt" id="categorias">
+      <div class="container">
+        <div class="section__head">
+          <h2>Categorías</h2>
+          <p class="muted">Cada bloque puede ser otra página o una sección dentro de la misma.</p>
+        </div>
+
+        <div class="grid catgrid">
+          <a class="cat" href="#cat-camaras">
+            <h3>📷 Cámaras</h3>
+            <p class="muted">Mirrorless, DSLR, compactas.</p>
+          </a>
+          <a class="cat" href="#cat-lentes">
+            <h3>🔭 Lentes</h3>
+            <p class="muted">Zoom, fijas, gran angular.</p>
+          </a>
+          <a class="cat" href="#cat-accesorios">
+            <h3>🎒 Accesorios</h3>
+            <p class="muted">Bolsos, trípodes, baterías.</p>
+          </a>
+          <a class="cat" href="#cat-iluminacion">
+            <h3>💡 Iluminación</h3>
+            <p class="muted">LED, flashes, softbox.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secciones por categoría (si querés todo en una sola página) -->
+    <section class="section" id="cat-camaras">
+      <div class="container">
+        <div class="section__head">
+          <h2>Cámaras</h2>
+          <p class="muted">Acá duplicás productos solo de cámaras.</p>
+        </div>
+        <p class="muted">👉 Copiá/pegá cards desde “Destacados” y reemplazá data.</p>
+      </div>
+    </section>
+
+    <section class="section" id="cat-lentes">
+      <div class="container">
+        <div class="section__head">
+          <h2>Lentes</h2>
+          <p class="muted">Acá duplicás productos solo de lentes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cat-accesorios">
+      <div class="container">
+        <div class="section__head">
+          <h2>Accesorios</h2>
+          <p class="muted">Acá duplicás productos solo de accesorios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cat-iluminacion">
+      <div class="container">
+        <div class="section__head">
+          <h2>Iluminación</h2>
+          <p class="muted">Acá duplicás productos solo de iluminación.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre nosotros -->
+    <section class="section section--alt" id="sobre">
+      <div class="container about">
+        <div>
+          <h2>Sobre Nosotros</h2>
+          <p class="muted">
+            Somos una tienda enfocada en equipos confiables para foto y video. Esta plantilla está pensada para que
+            cargues todo en HTML sin complicarte.
+          </p>
+          <ul class="list">
+            <li>Atención por WhatsApp / correo</li>
+            <li>Retiro o envío (según definas)</li>
+            <li>Garantía y asesoramiento</li>
+          </ul>
+        </div>
+        <div class="about__box">
+          <h3>Horario</h3>
+          <p class="muted">Lun a Vie • 08:00 a 18:00</p>
+          <h3>Ubicación</h3>
+          <p class="muted">Asunción / Gran Asunción (editá esto)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div>
+          <h2>Contacto</h2>
+          <p class="muted">Dejá un mensaje y te respondemos. (Formulario solo visual, sin backend)</p>
+
+          <div class="contact__cards">
+            <div class="info">
+              <h3>WhatsApp</h3>
+                <p class="muted">
+                    <a class="whatsapp-link"
+                        href="https://wa.me/595981830246?text=Hola%20quiero%20más%20información."
+                        target="_blank">
+                        <img src="/img/icon/whatsapp-brands-solid-full.png" alt="WhatsApp">
+                        <span>+595 981 830 246</span>
+                    </a>
+                </p>
+            </div>
+            <div class="info">
+              <h3>Correo</h3>
+              <p class="muted">ventas@tudominio.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--foot">
+          <span class="brand__logo"></span>
+          <span class="brand__name">Fuzors Store</span>
+        </div>
+        <p class="muted">Página estática. Cambiá textos e imágenes a gusto.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="muted small">
+        © <span id="year"></span>Fuzors Store. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal detalle -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>✕</button>
+      <div class="modal__img">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal__body">
+        <h3 id="modalTitle"></h3>
+        <p class="muted" id="modalDesc"></p>
+        <div class="modal__meta">
+          <span class="price" id="modalPrice"></span>
+          <span class="stock" id="modalStock"></span>
+        </div>
+        <a class="btn btn--primary" href="#contacto" id="modalCta">Consultar</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
